@@ -1,1 +1,1 @@
-# Interventional_fairness
+# Interventional fairness
