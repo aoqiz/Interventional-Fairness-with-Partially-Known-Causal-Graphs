@@ -74,7 +74,3 @@ Tradeoff plots can be reproduced using Simu_results_filter_and_processor_real.R 
 setwd('PATH_TO_DATA')
 ...
 ```
-
-## Contributing
-We welcome contributions to this repository. If you find any issues or have suggestions for improvements, please open an issue or a pull request.
-
