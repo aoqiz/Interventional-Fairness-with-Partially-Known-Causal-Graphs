@@ -1,5 +1,5 @@
 ## Overview
-This repository contains the code and instructions for reproducing the experiments in the paper [Interventional Fairness on Partially Known Causal Graphs: A Constrained Optimization Approach](https://openreview.net/forum?id=SKulT2VX9p) (ICLR 2024). The experiments including synthetic data and real data (Student and Credit) are conducted to demonstrate the effectiveness of the proposed method.
+This repository contains the code and instructions for reproducing the experiments in the paper [Interventional Fairness on Partially Known Causal Graphs: A Constrained Optimization Approach](https://openreview.net/forum?id=SKulT2VX9p) (ICLR 2024). The experiments are performed on synthetic dataset and real dataset (Student and Credit).
 
 ## Installation and Setup
 
@@ -7,10 +7,7 @@ This repository contains the code and instructions for reproducing the experimen
 - Python 3.9
 - R 4.2.1
 
-Before running the scripts, ensure that you have the required environments set up. You can install Python and R from their official websites.
-
-- Python: https://www.python.org/downloads/
-- R: https://cran.r-project.org/
+Before running the scripts, ensure that you have the required environments set up.
 
 ### Dependencies
 Install the necessary Python packages using:
@@ -29,7 +26,7 @@ For the convenience for the reader, we provide the processed data in the `./data
 
 ## Usage
 ### Generating Data and Results
-Run the provided shell script to generate data  and results. Modify parameters within `run.sh` as necessary:
+Run the provided shell script to generate data and results. Modify parameters within `run.sh` as necessary:
 ```shell
 bash run.sh
 ```
@@ -44,11 +41,11 @@ Tradeoff Plots
 
 To reproduce the tradeoff plots, execute `plot_tradeoff.R`:
 1. Change the working directory in the script to where your data is located.
-2. Set the variable `i` to one of the four settings (different combinations of nodes and edges) you wish to plot.
+2. Set the variable `i` to one of the four graph settings (different combinations of nodes and edges) you wish to plot.
 ```R
 setwd('PATH_TO_DATA')
 ...
-i =3  # one of the four settings that you want to get
+i = 3  # one of the four settings that you want to get
 ```
 The output will be saved in the `./Repository_adm={adm}` folder as `Tradeoff_MnodesNedges_truth.pdf` and `Tradeoff_MnodesNedges.pdf`, where M and N denote the number of nodes and edges respectively.
 
@@ -62,15 +59,15 @@ dd = 5  # Number of nodes
 ss = 8  # Number of edges
 adm = 0 # Number of admissible variables
 ```
-Output is stored in the `./Repository_adm={adm}` folder as `Density_MnodesNedgesKgraph.pdf`, where K is the number of graphs, and M and N denote the number of nodes and edges respectively.
+Output will be stored in the `./Repository_adm={adm}` folder as `Density_MnodesNedgesKgraph.pdf`, where K is the number of graphs, and M and N denote the number of nodes and edges respectively.
 
 ### Real Data Analysis (Student and Credit)
-Generate interventional data and results as follows: (Credit dataset is used as an example)
+Generate interventional data and results as follows: (Taking Student dataset as an example)
 ```shell
 cd student  # or 'cd credit'
 python gen_data_contingency.py    # generate data
 python separate_data.py     # align input format
-python soft_constraint.py   # process
+python soft_constraint.py   # train the model
 ```
 Tradeoff plots can be reproduced using Simu_results_filter_and_processor_real.R within the respective folders. Remember to set the working directory appropriately:
 ```R
