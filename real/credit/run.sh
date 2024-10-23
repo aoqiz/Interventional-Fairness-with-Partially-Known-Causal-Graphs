@@ -1,2 +1,0 @@
-
-python soft_constraint_contingency_2.py
