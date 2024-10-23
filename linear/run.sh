@@ -13,7 +13,7 @@ do
         # Learn MPDAG from DAG.
         Rscript dag2mpdag.R $j $s $i $adm
         # Fitting conditional densities and generate the interventional data according to the causal effect identification formula.
-        Rscript gene_interventions.R $j $s $i $adm # or 'python gene_interventions.py $j $s $i $adm' for nonlinear data.
+        Rscript gene_interventions.R $j $s $i $adm # or 'python gene_interventions.py $j $s $i $adm' for nonlinear synthetic data.
         # Fitting models.
         python soft_constraint.py $j $s $i $adm
     done
