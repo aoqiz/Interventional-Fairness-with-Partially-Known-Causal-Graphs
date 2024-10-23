@@ -1,5 +1,5 @@
 ## Overview
-This repository contrains the code and instructions for conducting and repeating the experiments in the paper [Interventional Fairness on Partially Known Causal Graphs: A Constrained Optimization Approach](https://openreview.net/forum?id=SKulT2VX9p) (ICLR 2024). The experiments including synthetic data and real data (Student and Credit) are conducted to demonstrate the effectiveness of the proposed method.
+This repository contains the code and instructions for reproducing the experiments in the paper [Interventional Fairness on Partially Known Causal Graphs: A Constrained Optimization Approach](https://openreview.net/forum?id=SKulT2VX9p) (ICLR 2024). The experiments including synthetic data and real data (Student and Credit) are conducted to demonstrate the effectiveness of the proposed method.
 
 ## Installation and Setup
 
@@ -7,7 +7,7 @@ This repository contrains the code and instructions for conducting and repeating
 - Python 3.9
 - R 4.2.1
 
-Before running the scripts, ensure that you have the required environments set up You can install Python and R from their official websites.
+Before running the scripts, ensure that you have the required environments set up. You can install Python and R from their official websites.
 
 - Python: https://www.python.org/downloads/
 - R: https://cran.r-project.org/
